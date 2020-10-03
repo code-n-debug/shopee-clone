@@ -1,0 +1,16 @@
+<div class="shops">
+    <div class="row">
+        <% for( let index = 0; index < 10; index++ ) { %>
+            <div class="col gap">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.it/300x200" class="card-img-top" alt="Shop <%= index+1 %>">
+                    <div class="card-body">
+                    <h5 class="card-title">Shop <%= index+1 %></h5>
+                    <p class="card-text">This is shop <%= index+1 %> description</p>
+                    <a href="/products" class="btn btn-primary">View Products</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

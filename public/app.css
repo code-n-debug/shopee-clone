@@ -1,0 +1,16 @@
+.shops {
+    padding: 20px;
+}
+
+.gap {
+    margin-bottom: 20px;
+}
+
+.back {
+    padding: 20px;
+}
+
+
+.back-shop-name, .back-product-name{
+    font-size: xx-large;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppe Clone - Checkout</title>
+    <%- include('common/linkrels.ejs') %>
+</head>
+<body>
+    <div class="content">
+        <%- include('common/nav.ejs') %>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                  <label for="cardName">Card Name</label>
+                  <input type="text" class="form-control" id="cardName" aria-describedby="emailHelp">
+                  <small id="cardNameHelp" class="form-text text-muted">We'll never share your card name detail with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" aria-describedby="emailHelp">
+                    <small id="cardNumberHelp" class="form-text text-muted">We'll never share your card name detail with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="cardExpiry">Card Expiry</label>
+                    <input type="text" class="form-control" id="cardExpiry" aria-describedby="emailHelp">
+                    <small id="cardExpiryHelp" class="form-text text-muted">We'll never share your card name detail with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="cardCVV">Card CVV</label>
+                    <input type="password" maxlength="3" class="form-control" id="cardCVV" aria-describedby="emailHelp">
+                  </div>
+                <button type="submit" class="btn btn-primary">Pay</button>
+              </form>
+        </div>
+    </div>
+    <%- include('common/script.ejs') %>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppe Clone - Products</title>
+    <%- include('common/linkrels.ejs') %>
+</head>
+<body>
+    <div class="content">
+        <%- include('common/nav.ejs') %>
+        <div class="back">
+            <div class="row">
+                <div class="col">
+                    <a class="btn" href="/">< </a>&nbsp;<span class="back-shop-name"><strong>Shop 1</strong></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="products">
+                <div class="row">
+                    <% for( let index = 0; index < 10; index++ ) { %>
+                        <a href="/products/<%= index+1 %>">
+                            <div class="col-md-12 gap">
+                                <div class="media">
+                                    <img src="https://placehold.it/100x100" class="mr-3" alt="Product <%= index+1 %>">
+                                    <div class="media-body">
+                                    <h5 class="mt-0">Product <%= index+1 %></h5>
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    </div>
+                                </div> 
+                            </div>
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('common/script.ejs') %>
+</body>
+</html>
