@@ -12,21 +12,21 @@
         <div class="back">
             <div class="row">
                 <div class="col">
-                    <a class="btn" href="/">< </a>&nbsp;<span class="back-shop-name"><strong>Shop 1</strong></span>
+                    <a class="btn" href="/">< </a>&nbsp;<span class="back-shop-name"><strong><%= shop.name %></strong></span>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="products">
                 <div class="row">
-                    <% for( let index = 0; index < 10; index++ ) { %>
-                        <a href="/products/<%= index+1 %>">
+                    <% for( let i = 0; i < products.length; i++ ) { %>
+                        <a href="/shops/<%= shop.id %>/product/<%= products[i].id %>">
                             <div class="col-md-12 gap">
                                 <div class="media">
-                                    <img src="https://placehold.it/100x100" class="mr-3" alt="Product <%= index+1 %>">
+                                    <img src="<%= products[i].image %>" class="mr-3" alt="<%= products[i].name %>">
                                     <div class="media-body">
-                                    <h5 class="mt-0">Product <%= index+1 %></h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    <h5 class="mt-0"><%= products[i].name %></h5>
+                                    <%= products[i].description %>
                                     </div>
                                 </div> 
                             </div>

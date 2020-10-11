@@ -1,13 +1,13 @@
 <div class="shops">
     <div class="row">
-        <% for( let index = 0; index < 10; index++ ) { %>
+        <% for( let i = 0; i < shops.length; i++ ) { %>
             <div class="col gap">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://placehold.it/300x200" class="card-img-top" alt="Shop <%= index+1 %>">
+                    <img src="<%= shops[i].logo %>" class="card-img-top" alt="<%= shops[i].name %>">
                     <div class="card-body">
-                    <h5 class="card-title">Shop <%= index+1 %></h5>
-                    <p class="card-text">This is shop <%= index+1 %> description</p>
-                    <a href="/products" class="btn btn-primary">View Products</a>
+                    <h5 class="card-title"><%= shops[i].name %></h5>
+                    <p class="card-text"><%= shops[i].description %></p>
+                    <a href="/shops/<%= shops[i].id %>" class="btn btn-primary">View Products</a>
                     </div>
                 </div>
             </div>

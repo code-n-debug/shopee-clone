@@ -1,19 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const Shops = require('../models/Shops');
 
-router.get('/', (req, res)=>{
-    res.render('index');
+router.get('/', async (req, res)=>{
+    const allShops = await Shops.getAllShop();
+    res.render('index', {
+        shops: allShops
+    });
 });
 
-router.use('/products', require('./products'));
-
-router.get('/shops', (req, res)=>{
-    res.render('shops');
-});
-
-router.get('/checkout', (req, res)=>{
-    res.render('checkout');
-});
+router.use('/shops', require('./products'));
+router.use('/checkout', require('./checkout'));
 
 
 module.exports = router;

@@ -7,4 +7,12 @@ $(function() {
     $('#plus').click(function(){
         $('#qty').val(parseInt($('#qty').val()) + 1);
     });
+
+    $('#buy').click(function(){
+        let loc = $('#buy').attr('href');
+        let params = new URLSearchParams();
+        params.append('qty', parseInt($('#qty').val()));
+        window.location.href = loc + '?' + params.toString();
+        return false;
+    });
 });
